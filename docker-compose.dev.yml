@@ -3,22 +3,21 @@
 #   app:
 #     image: anthonyvrgs/hello-app
 services:
-  # server:
-  #   build: ./server
-  #   ports:
-  #     - 5050:5000
-  #   command: npm run dev
-  #   volumes:
-  #     - ./server/src/:/app/src/
-  # mongodb:
-  #   image: mongo
-  #   volumes:
-  #     - ./data:/data/db
+  server:
+    build: ./server
+    ports:
+      - 5050:5000
+    command: npm run dev
+    volumes:
+      - ./server/src/:/app/src/
+  mongodb:
+    image: mongo
+    volumes:
+      - ./data:/data/db
   client:
     container_name: react-quete-docker
     build:
       context: ./client/app-quete-docker
-      #dockerfile: .client/Dockerfile
       dockerfile: ./Dockerfile
     volumes:
       - "./client/app-quete-docker:/app"
