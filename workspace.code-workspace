@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "docker-compose-03",
+		"path": "."
+	}
+],
+  "settings": {
+    "git.ignoreLimitWarning": true
+  }
+}
